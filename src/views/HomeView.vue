@@ -1,8 +1,30 @@
 <template>
   <div>
     <HomeCarousel />
+    <div class="container-fluid">
+      <h3 class="mt-4">
+        Kaffe Plus: <small class="text-body-secondary">A New Coffee Shop Experience</small>
+      </h3>
+      <p>
+        Kaffe Plus is a new coffee shop that is committed to providing its customers with a
+        high-quality experience. We use only the freshest ingredients and the most skilled baristas
+        to create our delicious drinks.
+      </p>
+
+      <p>
+        We also offer a variety of brewing methods, so you can find the perfect cup of coffee to
+        your taste. At Kaffe Plus, we believe that coffee is more than just a drink. It's a way to
+        connect with others and start the day off right. That's why we've created a comfortable and
+        inviting atmosphere where you can relax and enjoy your coffee.
+      </p>
+
+      <p>
+        We invite you to come and experience the Kaffe Plus difference today. We're confident that
+        you'll love our coffee, our service, and our atmosphere.
+      </p>
+    </div>
     <div class="text-center w-100">
-      <h1 class="mt-4">Follow us on Facebook</h1>
+      <h4 class="mt-4">Follow us on Facebook</h4>
       <iframe
         :src="fbSrc"
         :width="width"
