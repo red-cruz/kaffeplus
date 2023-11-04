@@ -1,5 +1,5 @@
 <template>
-  <div id="carousel" class="carousel slide carousel-dark border-bottom">
+  <div id="carousel" class="carousel slide carousel-dark border-bottom" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button
         v-for="(banner, index) in banners"
