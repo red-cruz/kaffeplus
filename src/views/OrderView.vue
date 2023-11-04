@@ -13,7 +13,12 @@
     <button type="button" class="btn btn-primary mt-3 me-3" @click="toPDF">
       gawa pdf resibo idk
     </button>
-    <button type="button" class="btn btn-primary mt-3">gawa qr code</button>
+    <button type="button" class="btn btn-primary mt-3 me-3" @click="toQR">gawa qr code</button>
+    <button v-show="show" type="button" class="btn btn-primary mt-3" @click="toQRDL">
+      download qr code
+    </button>
+
+    <div class="m-3" id="canvas"></div>
 
     <p class="text-danger mt-5">kunwari eto yung order</p>
     <table id="order-table" class="table">
@@ -49,11 +54,13 @@
 </template>
 
 <script setup>
+import logo from '../assets/img/logo-dark.png'
 import Swal from 'sweetalert2'
 import Vts from 'vts.js'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
+import QRCodeStyling from 'qr-code-styling'
 
 onMounted(() => {
   const vts = new Vts('order', { halt: true })
@@ -64,6 +71,31 @@ onMounted(() => {
     })
   })
 })
+let qrCode
+const show = ref(false)
+function toQR() {
+  show.value = true
+  qrCode = new QRCodeStyling({
+    width: 300,
+    height: 300,
+    type: 'svg',
+    data: 'https://kaffeplus.vercel.app/',
+    image: logo,
+    dotsOptions: {
+      color: '#4267b2',
+      type: 'rounded',
+    },
+    backgroundOptions: {
+      color: '#e9ebee',
+    },
+  })
+
+  qrCode.append(document.getElementById('canvas'))
+}
+
+function toQRDL() {
+  qrCode?.download({ name: 'qr', extension: 'svg' })
+}
 
 function toPDF() {
   const doc = new jsPDF()
