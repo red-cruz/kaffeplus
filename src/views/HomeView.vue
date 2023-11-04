@@ -41,6 +41,8 @@
 
 <script setup>
 import HomeCarousel from '../components/HomeCarousel.vue'
+import { onMounted } from 'vue'
+import anime from 'animejs'
 
 const width = window.screen.width > 500 ? 500 : window.screen.width
 const fbSrc =
@@ -52,6 +54,16 @@ const fbSrc =
   '&hide_cover=false' +
   '&show_facepile=true' +
   '&appId'
+
+onMounted(() => {
+  anime({
+    targets: 'img',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i + 1),
+  })
+})
 </script>
 
 <style lang="scss" scoped></style>

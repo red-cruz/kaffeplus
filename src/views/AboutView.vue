@@ -39,6 +39,8 @@
 <script setup>
 import chi from '../assets/img/chi.jpg'
 import marie from '../assets/img/1chi.jpg'
+import { onMounted } from 'vue'
+import anime from 'animejs'
 
 const width = window.screen.width > 800 ? 800 : window.screen.width
 const persons = [
@@ -68,5 +70,15 @@ const persons = [
     link: 'https://web.facebook.com/xMatrixKirigawax',
   },
 ]
+
+onMounted(() => {
+  anime({
+    targets: ['img', ''],
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i + 1),
+  })
+})
 </script>
 <style></style>
