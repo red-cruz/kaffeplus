@@ -8,7 +8,7 @@
       <ul class="navbar-nav me-auto flex-row">
         <NavItem href="/order">
           <Icon icon="line-md:coffee-half-empty-twotone-loop" width="20" />
-          <span> Order Now</span>
+          Order <span class="d-none d-sm-inline">Now</span>
         </NavItem>
 
         <NavItem href="/about">
@@ -18,14 +18,14 @@
       </ul>
       <a
         href="https://github.com/red-cruz"
-        class="me-1"
+        class="me-3"
         target="_blank"
         style="text-decoration: none"
       >
         <Icon icon="line-md:github-loop" width="21" />
       </a>
-      <span role="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
-        <Icon icon="mdi:cart-outline" width="21" class="me-1" />
+      <span class="me-3" role="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
+        <Icon icon="mdi:cart-outline" width="21" />
       </span>
       <ThemeToggle @dark="logo = light" @light="logo = dark" />
     </div>

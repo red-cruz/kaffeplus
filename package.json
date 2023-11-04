@@ -12,6 +12,8 @@
   "dependencies": {
     "@sweetalert2/theme-dark": "^5.0.15",
     "bootstrap": "^5.3.2",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.7.1",
     "sweetalert2": "^11.9.0",
     "vts.js": "^1.6.2-beta",
     "vue": "^3.3.4",
