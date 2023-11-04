@@ -6,10 +6,11 @@
       </RouterLink>
 
       <ul class="navbar-nav me-auto flex-row">
-        <NavItem href="/about">
+        <NavItem href="/order">
           <Icon icon="line-md:coffee-half-empty-twotone-loop" width="20" />
           <span> Order Now</span>
         </NavItem>
+
         <NavItem href="/about">
           <Icon icon="line-md:question-circle" width="20" />
           About <span class="d-none d-sm-inline">Us</span>
@@ -23,6 +24,9 @@
       >
         <Icon icon="line-md:github-loop" width="21" />
       </a>
+      <span role="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
+        <Icon icon="mdi:cart-outline" width="21" class="me-1" />
+      </span>
       <ThemeToggle @dark="logo = light" @light="logo = dark" />
     </div>
   </nav>
