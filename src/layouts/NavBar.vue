@@ -15,6 +15,14 @@
           About <span class="d-none d-sm-inline">Us</span>
         </NavItem>
       </ul>
+      <a
+        href="https://github.com/red-cruz"
+        class="me-1"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <Icon icon="line-md:github-loop" width="21" />
+      </a>
       <ThemeToggle @dark="logo = light" @light="logo = dark" />
     </div>
   </nav>
