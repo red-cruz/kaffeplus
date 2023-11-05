@@ -11,6 +11,16 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
+      manifest: {
+        icons: [
+          {
+            src: '/img/icons/logo.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
     }),
   ],
   resolve: {
