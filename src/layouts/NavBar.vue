@@ -7,20 +7,20 @@
 
       <ul class="navbar-nav me-auto flex-row">
         <NavItem href="/order">
-          <Icon icon="line-md:coffee-half-empty-twotone-loop" width="20" />
-          Order <span class="d-none d-sm-inline">Now</span>
+          <Icon icon="line-md:coffee-half-empty-twotone-loop" class="align-middle" width="20" />
+          <span class="align-middle">Order <span class="d-none d-sm-inline">Now</span></span>
         </NavItem>
 
         <NavItem href="/about">
-          <Icon icon="line-md:question-circle" width="20" />
-          About <span class="d-none d-sm-inline">Us</span>
+          <Icon icon="line-md:buy-me-a-coffee-twotone" width="20" />
+          <span class="align-middle">About <span class="d-none d-sm-inline">Us</span></span>
         </NavItem>
       </ul>
       <a
         href="https://github.com/red-cruz"
         class="me-3"
         target="_blank"
-        style="text-decoration: none"
+        style="text-decoration: none; color: inherit"
       >
         <Icon icon="line-md:github-loop" width="21" />
       </a>

@@ -1,6 +1,6 @@
 <template>
   <li class="nav-item">
-    <RouterLink :to="href" class="nav-link me-3" active-class="active">
+    <RouterLink :to="href" class="nav-link me-3" active-class="active fw-medium">
       <slot></slot>
     </RouterLink>
   </li>
